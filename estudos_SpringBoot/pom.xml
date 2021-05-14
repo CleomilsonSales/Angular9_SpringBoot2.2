@@ -13,9 +13,8 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-    <!-- bastar colocar essa dependêcia no projeto -->
-    <!-- instalar a dependênias: clica com o botão direito e em maven dar um reload project, depois permitir as
-    dependências serem baixadas-->
+    <!-- pega as dependencias no site https://mvnrepository.com/ -->
+    <!-- Dependêcias do spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
