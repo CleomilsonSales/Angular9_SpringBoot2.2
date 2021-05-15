@@ -16,7 +16,7 @@ public class ClientesApplications {
         return args -> {
             Cliente cliente = Cliente
                     .builder()
-                    .cpf("12345678911")
+                    .cpf("46356888016")
                     .nome("Saori Miranda")
                     .build();
             repository.save(cliente);
