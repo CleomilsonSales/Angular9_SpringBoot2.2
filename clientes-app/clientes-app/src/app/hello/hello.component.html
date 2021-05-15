@@ -1,0 +1,8 @@
+<h1> {{ texto }}</h1>
+
+<ul>
+    <!-- *ngFor é o mesmo que um foreach no java-->
+    <li *ngFor="let cliente of clientes">
+        Nome: {{ cliente.nome }} | Idade: {{ cliente.idade }}
+    </li>
+</ul>

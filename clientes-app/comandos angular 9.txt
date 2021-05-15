@@ -1,0 +1,16 @@
+//angular CLI: https://angular.io/cli
+//comando para criar um projeto angular 9
+//-g serão instalado global
+npm install -g @angular/cli
+//criando o projeto na pasta que estive no prompt
+ng new nome_aplicacao //aceite o routing e o stylesheet usa o CSS
+//inicializar a aplicação
+ng serve --open
+//criando components
+// g - generate
+// c - component
+// se não quiser o test basta colocar: --skipTests=true
+ng g c nomeComponent
+//criando module
+// m - module
+ng g m nomeModulo
