@@ -1,4 +1,4 @@
-//angular CLI: https://angular.io/cli
+﻿//angular CLI: https://angular.io/cli
 //comando para criar um projeto angular 9
 //-g serão instalado global
 npm install -g @angular/cli
@@ -27,6 +27,9 @@ https://startbootstrap.com/template/sb-admin
 
 //abrindo um projeto no vscode
 code .
+
+//para usar um angular do github depois de baixado
+npm install 
 
 //otimos icones
 https://fontawesome.com/icons?d=gallery&p=1
