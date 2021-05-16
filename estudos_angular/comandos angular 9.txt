@@ -14,3 +14,19 @@ ng g c nomeComponent
 //criando module
 // m - module
 ng g m nomeModulo
+
+//instalando o jquery --lembrando de referenciar no angular.json
+//--save para manter no projeto
+npm install --save jquery
+
+//instalando o bootstrap 4.3.1 --lembrando de referenciar no angular.json
+npm install --save bootstrap@4.3.1
+
+//um bom template do bootstrap
+https://startbootstrap.com/template/sb-admin
+
+//abrindo um projeto no vscode
+code .
+
+//otimos icones
+https://fontawesome.com/icons?d=gallery&p=1
