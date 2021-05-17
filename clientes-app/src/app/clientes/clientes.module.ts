@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { ClientesRoutingModule } from './clientes-routing.module';
 import { ClientesFormComponent } from './clientes-form/clientes-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [ClientesFormComponent],
   imports: [
     CommonModule,
-    ClientesRoutingModule
+    ClientesRoutingModule,
+    FormsModule //para usar o data-binding - persistencia de dados no angular
+  ],
+  exports:[
+    ClientesFormComponent
   ]
 })
 export class ClientesModule { }
