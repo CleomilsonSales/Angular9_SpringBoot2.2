@@ -12,7 +12,7 @@ Em ambas direções
     [(ngModel)]="nome" - isso é um two-way data-binding
 -->
 <div class="container">
-    <form>
+    <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <!-- a tela é de 12 posições-->
             <div class="col-md-6">
@@ -44,7 +44,7 @@ Em ambas direções
         </div>
         <div class="row">
             <div class="col-md-2">
-                <button type="submit" class="btn btn-success" (click)="clicar()">
+                <button type="submit" class="btn btn-success">
                     <i class="fa fa-save"></i> Salvar
                 </button> 
             </div>

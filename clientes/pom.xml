@@ -39,6 +39,7 @@
         </dependency>
 
         <!-- banco de dados h2 é do tipo de banco em memoria -->
+        <!-- http://localhost:8080/h2-console  - para acessar -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>

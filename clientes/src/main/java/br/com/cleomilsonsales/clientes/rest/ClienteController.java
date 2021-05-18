@@ -2,7 +2,6 @@ package br.com.cleomilsonsales.clientes.rest;
 
 import br.com.cleomilsonsales.clientes.model.entity.Cliente;
 import br.com.cleomilsonsales.clientes.model.repository.ClienteRepository;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +11,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/clientes")
+@CrossOrigin("http://localhost:4200") //permite comunição entre o backend é o frontend por estarem em dominios diferentes
 public class ClienteController {
 
     private final ClienteRepository repository;
