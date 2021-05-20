@@ -1,6 +1,6 @@
 <h1 class="mt-4">Clientes</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Cadastro</li>
+    <li class="breadcrumb-item active">{{ cliente.id ? 'Edição' :  'Cadastro'}}</li>
 </ol>
 <!-- 
 Do component para o template
@@ -14,6 +14,17 @@ Em ambas direções
 <div class="container">
     <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="sucesso == true">
+                    Cliente salvo/atualizado com sucesso!
+                </div>
+                <div class="alert alert-danger" role="alert" *ngFor="let erro of erros">
+                    {{ erro }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="cliente.id">
             <!-- a tela é de 12 posições-->
             <div class="col-md-6">
                 <div class="form-group">
@@ -43,9 +54,18 @@ Em ambas direções
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2">
-                <button type="submit" class="btn btn-success">
+            <!-- para encontrar icones legais para os botões
+                https://fontawesome.com/icons
+            -->
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success" *ngIf="!cliente.id">
                     <i class="fa fa-save"></i> Salvar
+                </button> 
+                <button type="submit" class="btn btn-primary" *ngIf="cliente.id">
+                    <i class="fa fa-sync-alt"></i> Atualizar
+                </button> 
+                <button type="button" class="btn btn-danger ml-1" (click)="voltarLista()">
+                    <i class="fa fa-arrow-circle-left"></i> Voltar
                 </button> 
             </div>
         </div>

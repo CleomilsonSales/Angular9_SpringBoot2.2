@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/clientes")
@@ -25,6 +26,11 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.CREATED) //Recebendo os status 201
     public Cliente salvar(@RequestBody @Valid Cliente cliente){
         return repository.save(cliente);
+    }
+
+    @GetMapping
+    public List<Cliente> obterTodos(){
+        return repository.findAll();
     }
 
     @GetMapping("{id}")
