@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/clientes")
-@CrossOrigin("http://localhost:4200") //permite comunição entre o backend é o frontend por estarem em dominios diferentes
+//@CrossOrigin("http://localhost:4200") -  - esta sendo feita pela class WebConfig //permite comunição entre o backend é o frontend por estarem em dominios diferentes
 public class ClienteController {
 
     private final ClienteRepository repository;

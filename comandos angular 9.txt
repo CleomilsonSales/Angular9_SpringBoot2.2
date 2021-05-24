@@ -13,7 +13,7 @@ ng serve --open
 ng g c nomeComponent
 //criando module
 // m - module
-ng g m nomeModulo
+ng g m --routing nomeModulo
 
 //instalando o jquery --lembrando de referenciar no angular.json
 //--save para manter no projeto

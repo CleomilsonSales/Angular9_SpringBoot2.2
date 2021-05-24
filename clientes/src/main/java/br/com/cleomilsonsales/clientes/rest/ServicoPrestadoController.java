@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/servicos-prestados")
 @RequiredArgsConstructor //para evitar fazer o construtor dos final que precisaria para injetar as dependencias
+//@CrossOrigin("http://localhost:4200") - esta sendo feita pela class WebConfig
 public class ServicoPrestadoController {
 
     private final ClienteRepository clienteRepository;
@@ -27,7 +29,7 @@ public class ServicoPrestadoController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ServicoPrestado salvar(@RequestBody ServicoPrestadorDTO dto){
+    public ServicoPrestado salvar(@RequestBody @Valid ServicoPrestadorDTO dto){
         LocalDate data = LocalDate.parse(dto.getData(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         Integer idCliente = dto.getIdCliente();
 
