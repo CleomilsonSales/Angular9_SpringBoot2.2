@@ -33,7 +33,7 @@ public class ApplicationControllerAdvice {
 
     @ExceptionHandler(ResponseStatusException.class) //intercepta erros e melhora a mensagem
     public ResponseEntity handlerResponseStatusException (ResponseStatusException ex){
-        String mensagemErro = ex.getMessage();
+        String mensagemErro = ex.getReason(); //não fica legal com o getMessage(), pq ele mostra o erro completo, com o Reason irá retornar apenas a mensagem limpa
         HttpStatus codigoStatus = ex.getStatus();
         ApiErros apiErros = new ApiErros(mensagemErro);
         return new ResponseEntity(apiErros,codigoStatus);

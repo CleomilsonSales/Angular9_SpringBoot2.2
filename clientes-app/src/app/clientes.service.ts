@@ -21,22 +21,30 @@ export class ClientesService {
   //Observable - aplicação reativa
   //requisição assíncrona: ou seja sem o observable não teria uma resposta
   salva(cliente: Cliente) : Observable<Cliente> {
-    return this.http.post<Cliente>(`${this.apiURLBase}`,cliente);
+      return this.http.post<Cliente>(`${this.apiURLBase}`,cliente);
   }
 
-  atualizar(cliente: Cliente) : Observable<Cliente> {
+  atualizar(cliente: Cliente) : Observable<Cliente> {    
     return this.http.put<Cliente>(`${this.apiURLBase}/${cliente.id}`,cliente);
   }
 
   getClientes(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(`${this.apiURLBase}`);
+    /*//pegando o token o OAuth2 sem usar o interceptor
+    const token = JSON.parse(localStorage.getItem('access_token'))
+    const headers = {
+      'Authorization': 'Bearer ' + token.access_token
+    }*/
+    
+    //como a constante em o mesmo nome do headers não precisa do : headers
+    return this.http.get<Cliente[]>(`${this.apiURLBase}`/*, { headers }*/);
   }
 
   getClientesById(id: number) : Observable<Cliente> {
+
     return this.http.get<any>(`${this.apiURLBase}/${id}`);
   }
 
-  deletar(cliente: Cliente) : Observable<any> {
+  deletar(cliente: Cliente) : Observable<any> {   
     return this.http.delete<any>(`${this.apiURLBase}/${cliente.id}`);
   }
 
