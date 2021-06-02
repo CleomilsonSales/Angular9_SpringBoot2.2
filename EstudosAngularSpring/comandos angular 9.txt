@@ -26,6 +26,9 @@ npm install --save jquery
 //instalando o bootstrap 4.3.1 --lembrando de referenciar no angular.json
 npm install --save bootstrap@4.3.1
 
+//instalando o material
+ng add @angular/material
+
 //um bom template do bootstrap
 https://startbootstrap.com/template/sb-admin
 
