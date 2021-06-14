@@ -41,3 +41,9 @@ npm install --save @auth0/angular-jwt
 
 //otimos icones
 https://fontawesome.com/icons?d=gallery&p=1
+
+//otimas extensões para trabalhar no angular
+Angular Language Service
+
+//evitando as variaveis serem iniciadas no angular 9
+//no arquivo tsconfig.json coloca "strictPropertyInitialization": false,
