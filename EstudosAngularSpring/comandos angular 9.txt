@@ -47,3 +47,7 @@ Angular Language Service
 
 //evitando as variaveis serem iniciadas no angular 9
 //no arquivo tsconfig.json coloca "strictPropertyInitialization": false,
+
+
+//criar arquivo pra produção
+ng build --prod
